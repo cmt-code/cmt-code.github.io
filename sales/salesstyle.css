@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: gray;
+}
+.logo {
+    color: lightgray;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    margin-left: 5rem;
+
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    z-index: 1;
+}
+.nav-links li{
+    list-style: none;
+    z-index: 1;
+}
+.nav-links a{
+    color: lightgray;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: auto;
+    z-index: 1;
+
+
+}
+.burger{
+    display: none;
+}
+.burger div{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: lightgray;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+   .nav-links{
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top: 4.5vh;
+       background-color: gray;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 22%;
+       transform: translateX(100%);
+       transition: transform 0.25s ease-in;
+
+   }
+   .logo h4{
+       align-content: center;
+   }
+   .nav-links li{
+       opacity: 0;
+   }
+   .burger{
+       display: block;
+   }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+opacity: 0;
+transform: translateX(50px)
+    }
+    to{
+opacity: 1;
+transform: translateX(0px);
+    }
+}
+ .content { 
+     font-family: "poppins", sans-serif;
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     perspective: 1000px;
+     
+ }
+ .container {
+     width: 50%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+ }
+.card {
+    transform-style: preserve-3d;
+    min-height: 50rem;
+    height: 35rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0,0,0, 0.2), 0px 0px 50px rgba(0,0,0, 0.2);
+}
+.circle {
+  width: 20rem;
+  height: 20rem;
+  background: linear-gradient(
+    to right,
+    rgba(245, 70, 66, 0.75),
+    rgba(8, 83, 156, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+.sweater {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    z-index: 2;
+
+}
+.sweater img{
+width: 20rem;
+z-index: 2;
+transition: all 0.75s ease-out;
+}
+.info h1{
+    font-size: 3rem;
+    transition: all 0.75s ease-out;
+}
+.info h3 {
+    font-size: 1.3rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+.colors {
+    transition: all 0.75s ease-out;
+}
+.colors button{
+    margin-bottom: 2rem;
+    padding: 0.5rem 2rem;
+    background:none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+}
+button.grey {
+    background-color: gray;
+    color: white;
+}
+.sizes{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+
+}
+.sizes button{
+    padding: 0.5rem 2rem;
+    background:none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    transition: all 0.75s ease-out;
+}
+button.active{
+background: #585858;
+color: white;
+}
+.purchase{
+    margin-top: 5rem;
+    transition: all 0.75s ease-out;
+}
+.purchase button{
+    width:100%;
+    padding: 1rem 0rem;
+    background: #f54642;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+}
